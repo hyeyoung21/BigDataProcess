@@ -27,6 +27,8 @@ list.sort()
 list.reverse()
 print(list)
 
+i -= 2
+
 ap = int(i * 0.15)
 a = int(i * 0.3)
 bp = int(i * 0.5)
@@ -38,15 +40,15 @@ for j in range(2, i) :
 	grade = 'H' + str(j)
 	if total <= 40 :
 		s[grade] = "F"
-	elif total >= list[ap] : 
+	elif total > list[ap] : 
 		s[grade] = "A+"
-	elif total >= list[a] :
+	elif total > list[a] :
 		s[grade] = "A"
-	elif total >= list[bp] :
+	elif total > list[bp] :
 		s[grade] = "B+"
-	elif total >= list[b] :
+	elif total > list[b] :
 		s[grade] = "B"
-	elif total >= list[cp] :
+	elif total > list[cp] :
 		s[grade] = "C+"
 	else :
 		s[grade] = "C"
