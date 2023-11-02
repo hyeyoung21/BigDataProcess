@@ -38,7 +38,7 @@ cp = int(i * 0.85)
 for j in range(2, i) :
 	total = s['G' + str(j)].value
 	grade = 'H' + str(j)
-	if total <= 40 :
+	if total < 40 :
 		s[grade] = "F"
 	elif total > list[ap] : 
 		s[grade] = "A+"
