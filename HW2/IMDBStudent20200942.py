@@ -1,7 +1,12 @@
-f = open("movie.dat")
+import sys
+inputfile = sys.argv[1]
+outputfile = sys.argv[2]
+
+fi = open(inputfile)
+fo = open(outputfile, "wt")
 # f = open("movies_exp.txt")
 a = dict()
-for i in f :
+for i in fi :
     s = i.split("::")
     genre = s[-1].split("|")
 
@@ -12,6 +17,8 @@ for i in f :
             a[j.strip()] += 1
 
 for i, j in a.items() :
-    print(i, j)
+    line = i + " " + str(j) + "\n"
+    fo.write(line)
 
-print(a)
+fi.close()
+fo.close()
