@@ -1,9 +1,17 @@
 import datetime
-f = open("uber_exp.txt")
+import sys
+inputfile = sys.argv[1]
+outputfile = sys.argv[2]
+
+fi = open(inputfile)
+fo = open(outputfile, "wt")
+# f = open("uber_exp.txt")
+
+
 wd = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 dict = dict()
 
-for i in f :
+for i in fi :
     s = i.split(",")
     car = s[0]
     date = s[1]
@@ -28,7 +36,8 @@ for i in f :
 
 
 for i, j in dict.items() :
-    print(i, j)
+    line = i + " " + j + "\n"
+    fo.write(line)
 
-
-# B02512,1/1/2015,190,1132
+fi.close()
+fo.close()
