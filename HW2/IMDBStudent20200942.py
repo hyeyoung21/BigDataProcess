@@ -10,11 +10,13 @@ for i in fi :
     s = i.split("::")
     genre = s[-1].split("|")
 
-    for j.strip() in genre : 
-        if j not in a :
-            a[j.strip()] = 1
+    for j in genre :
+        movie = j.strip() 
+        if movie not in a :
+            a[movie] = 1
         else :
-            a[j.strip()] += 1
+            a[movie] += 1
+        # print(movie)
 
 for i, j in a.items() :
     line = i + " " + str(j) + "\n"
