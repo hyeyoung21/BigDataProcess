@@ -10,7 +10,7 @@ for i in fi :
     s = i.split("::")
     genre = s[-1].split("|")
 
-    for j in genre : 
+    for j.strip() in genre : 
         if j not in a :
             a[j.strip()] = 1
         else :
