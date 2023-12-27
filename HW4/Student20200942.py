@@ -54,7 +54,7 @@ def predictNumber(folder, training_data, training_labels, k):
             error += 1
     rate = error / len(file_list) * 100
     rate = int(rate)
-    print("K={}일 때는 {}%".format(k, rate))
+    print(rate)
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
