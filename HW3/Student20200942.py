@@ -65,5 +65,5 @@ if __name__ == "__main__":
     data_folder = sys.argv[2]
 
     group, labels = trainingNumber(training_folder)
-    for i in range(1, 20) :
+    for i in range(1, 21) :
         predictNumber(data_folder, group, labels, i)
